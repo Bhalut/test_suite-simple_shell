@@ -1,5 +1,9 @@
+# Pull Request Template
+
 ## Description
 Please explain the changes you made here.
+
+Fixes # (issue)
 
 ## Checklist
 - [ ] Code compiles correctly
