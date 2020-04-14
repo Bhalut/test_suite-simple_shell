@@ -19,7 +19,7 @@ $SLEEP $SLEEPSECONDS
 
 # check the result
 nmatch=`cat $OUTPUTFILE | grep -c "$tmp_file"`
-if [ $nmatch -eq 5 ]; then
+if [ $nmatch -eq 1 ]; then
 		print_ok
 else
 		print_ko
