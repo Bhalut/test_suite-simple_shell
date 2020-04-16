@@ -2,21 +2,22 @@
 #
 # check if the hsh shell handle the arguments
 command="   ls -l -a"
-tmp_file="test_sh_arguments"
-tmp_file2="test_hsh_arguments"
+tmp_file_hsh="test_sh_arguments"
+tmp_file2_sh="test_hsh_arguments"
 # create a pseudo random file
-touch $tmp_file
-# send commands
-echo "$command" | ./hsh > $tmp_file 2> /dev/null &
+touch $tmp_file_hsh
+touch $tmp_file2_sh
+# send commands to hsh
+echo "$command" | ./hsh > $tmp_file_hsh 2> /dev/null &
 let tmp_exit=`echo $?`
-# wait a little bit
+# wait a bit
 $SLEEP $SLEEPSECONDS
-# check the result
-nmatch=`grep -c "$output_shell" "$output_sh"`
+# checking, and comparing hsh and sh
+nmatch=`grep -c "$tmp_file_hsh" "$tmp_file2_sh"`
 if [ $nmatch -eq 0 ]; then
        echo "Test passed"
 else
-       echo "Test not worked"
+       echo "Test Failed"
 fi
 # clean up
 stop_shell
