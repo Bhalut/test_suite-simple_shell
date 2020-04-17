@@ -1,8 +1,17 @@
 # Test Suite - Simple_Shell
 
-Test suite for Simple Shell Project - Holberton School 
+Test suite for Simple Shell Project - Holberton School
 
 #### [Simple Shell](https://intranet.hbtn.io/projects/235)
+
+
+## Usage
+
+When executing `check_simple_shell.bash`, keep in mind that the executable must have the name of `./hsh` and located in this current folder.
+
+To change this you must modify the `SHELL` variable located in the `config` file.
+
+---
 
 
 ## General Information
@@ -10,7 +19,7 @@ Test suite for Simple Shell Project - Holberton School
  - How to contribute
  - Defined convention for the Shell tester
  - How to use this test suite
- 
+
 ## How to contribute
 
 Check the [Contributor's Guide](https://github.com/Bhalut/test_suite-simple_shell/blob/master/CONTRIBUTING.md)
@@ -19,10 +28,9 @@ Check the [Contributor's Guide](https://github.com/Bhalut/test_suite-simple_shel
 
 Check the [Shell tester style guide](https://github.com/julianfrancor/test_suite-simple_shell/wiki/Shell-tester-style-guide)
 
-
 ## How to use this test suite
 
-1. Clone this repository in you home directory 
-`git clone https://github.com/Bhalut/test_suite-simple_shell.git` 
+1. Clone this repository in you home directory
+`git clone https://github.com/Bhalut/test_suite-simple_shell.git`
 2. Set up the tester
 3. Run the executeble file to test you Simple_shell
