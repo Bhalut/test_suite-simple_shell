@@ -1,0 +1,13 @@
+#!/bin/bash
+
+diff <(echo "/bin/ls -l" | ./a.out) <(echo "/bin/ls -l" | sh)
+diff <(echo "/bin/ls -ñ" | ./a.out) <(echo "/bin/ls -ñ" | sh)
+diff <(echo "    /bin/ls -l" | ./a.out) <(echo "    /bin/ls -l" | sh)
+diff <(echo "    /bin/ls -ñ" | ./a.out) <(echo "    /bin/ls -ñ" | sh)
+diff <(echo "ls -l" | ./a.out) <(echo "ls -l" | sh)
+diff <(echo "ls -ñ" | ./a.out) <(echo "ls -ñ" | sh)
+diff <(echo "    ls -ñ" | ./a.out) <(echo "    ls -ñ" | sh)
+diff <(echo "    ls -l" | ./a.out) <(echo "    ls -l" | sh)
+diff <(echo "asdf" | ./a.out) <(echo "asdf" | sh)
+diff <(echo "exit asdf" | ./a.out) <(echo "exit asdf" | sh)
+diff <(echo "exit 98 asdf" | ./a.out) <(echo "exit 98 asdf" | sh)
